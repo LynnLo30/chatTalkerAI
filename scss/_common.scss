@@ -1,3 +1,4 @@
+@import "reset";
 @import "variables";
 
 // global style
@@ -5,7 +6,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  //   outline: 1px solid #f00;
+  // outline: 1px solid #f00;
 }
 
 body {
@@ -29,6 +30,12 @@ img {
 button {
   border: none;
   cursor: pointer;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
 }
 
 h1 {
@@ -61,12 +68,6 @@ h5 {
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 26px;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #ddd;
 }
 
 // layout
@@ -103,6 +104,12 @@ section {
   background-color: $white;
 }
 
+.box {
+  padding: 24px 32px;
+  border-radius: 12px;
+  background-color: $note-light-color;
+}
+
 .copyright {
   background-color: $note-light-color;
   text-align: center;
@@ -113,6 +120,7 @@ section {
 
 .btn-main {
   color: $white;
+  font-family: $writing-font;
   font-size: 1.125rem;
   line-height: 26px;
   border-radius: 27px;
@@ -126,6 +134,18 @@ section {
   border-radius: 22px;
   background-color: $accent-color;
   padding: 8px 32px;
+  z-index: 1;
+}
+
+.btn-main-outline {
+  color: $main-color;
+  font-family: $writing-font;
+  font-size: 1.125rem;
+  line-height: 26px;
+  border-radius: 27px;
+  border: 1px solid $main-color;
+  background-color: $white;
+  padding: 12px 32px;
 }
 
 button.go-to-top {
@@ -137,7 +157,7 @@ button.go-to-top {
   width: 71px;
   height: 71px;
   position: absolute;
-  right: 48px;
+  right: 3%;
 }
 
 .five-star {
@@ -147,6 +167,22 @@ button.go-to-top {
     color: $sub-color;
     margin: 2px;
   }
+}
+
+.fa-check {
+  color: $sub-color;
+  padding: 4px 12px 4px 0;
+}
+
+.fa-equals {
+  margin: 0 19px;
+}
+
+.fa-plus,
+.fa-minus {
+  color: $main-color;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .slider-dots {
@@ -162,7 +198,7 @@ button.go-to-top {
     border-radius: 50%;
     background-color: $note-mid-color;
   }
-  
+
   .dot-active {
     width: 16px;
     background-color: $sub-color;

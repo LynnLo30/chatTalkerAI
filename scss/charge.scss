@@ -1,0 +1,127 @@
+@import "common";
+
+// --- header
+header {
+  background: $main-light-color;
+  background-size: 100%;
+  border-radius: 0px 0px 0px 300px;
+  height: 64vh;
+
+  .bg-img {
+    width: 55rem;
+    height: 35rem;
+    background-image: url("../images/banner.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  h2 {
+    margin: 92px 0 16px 0;
+  }
+}
+
+// --- program
+.program {
+  text-align: center;
+  background: url("../images/ball03.svg") no-repeat -22% 72% / 22.5rem;
+}
+
+.population {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: center;
+
+  .population-item {
+    padding: 0 8px;
+  }
+}
+
+.plan {
+  display: flex;
+  justify-content: space-evenly;
+  
+  .card {
+    padding: 16px 32px;
+
+    hr + p {
+      margin: 32px 0;
+    }
+
+    .btn-main {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.conversion {
+  .subscriber {
+    span,
+    sub {
+      color: $main-color;
+    }
+  }
+
+  p {
+    font-size: 0.75rem;
+    line-height: 17px;
+    margin-bottom: 8px;
+  }
+
+  span {
+    font-family: $writing-font;
+    font-size: 2rem;
+    line-height: 35px;
+  }
+
+  sub {
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 17px;
+    margin-left: 8px;
+  }
+}
+
+.plan-items {
+  margin: 32px 0;
+  text-align-last: left;
+
+  li {
+    padding: 8px 0;
+  }
+}
+
+// --- FAQ
+.FAQ {
+  
+  h3 {
+    text-align: center;
+  }
+
+  .QA {
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      padding: 16px 32px;
+      margin: 16px 0;
+
+      .answer {
+        margin-top: 24px;
+        line-height: 32px;
+      }
+    }
+
+    .collapse-active {
+      .question {
+        color: $main-color;
+        font-weight: bold;
+      }
+
+      .answer {
+        color: $note-color;
+      }
+    }
+  }
+}
