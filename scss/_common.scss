@@ -9,11 +9,20 @@
   // outline: 1px solid #f00;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: $title-color;
   font-size: 1rem;
   font-family: $main-font;
   line-height: 1.5;
+
+  // 未滾動時，隱藏滾動條
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 a {
@@ -35,7 +44,7 @@ button {
 hr {
   border: 0;
   height: 1px;
-  background-color: #ddd;
+  background-color: $note-mid-color;
 }
 
 h1 {
@@ -45,10 +54,24 @@ h1 {
   line-height: 26px;
 }
 
+@media (max-width: 376px) {
+  h1 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
 h2 {
   font-size: 3rem;
   font-weight: bold;
   line-height: 70px;
+}
+
+@media (max-width: 376px) {
+  h2 {
+    font-size: 2rem;
+    line-height: 46px;
+  }
 }
 
 h3 {
@@ -56,6 +79,14 @@ h3 {
   font-weight: bold;
   line-height: 46px;
   margin-bottom: 48px;
+}
+
+@media (max-width: 376px) {
+  h3 {
+    font-size: 1.75rem;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
 }
 
 h4 {
@@ -78,6 +109,13 @@ h5 {
   padding: 0 16px;
 }
 
+@media (max-width: 376px) {
+  .container {
+    max-width: 355px;
+    padding: 0 10px;
+  }
+}
+
 nav {
   padding: 24px 0;
   margin-bottom: 30px;
@@ -87,9 +125,29 @@ nav {
   }
 }
 
+@media (max-width: 376px) {
+  nav {
+    background-color: $white;
+    padding: 16px 0;
+    margin-bottom: 32px;
+    border-bottom: 2px solid $sub-color;
+
+    a > img {
+      height: 24px;
+    }
+  }
+}
+
 header,
 section {
   margin-bottom: 100px;
+}
+
+@media (max-width: 376px) {
+  header,
+  section {
+    margin-bottom: 60px;
+  }
 }
 
 .split {
@@ -110,6 +168,12 @@ section {
   background-color: $note-light-color;
 }
 
+@media (max-width: 376px) {
+  .box {
+    padding: 16px 24px;
+  }
+}
+
 .copyright {
   background-color: $note-light-color;
   text-align: center;
@@ -127,6 +191,10 @@ section {
   border: 1px solid $main-color;
   background-color: $main-color;
   padding: 12px 32px;
+
+  &:hover {
+    background-color: darken($main-color, 15%);
+  }
 }
 
 .btn-accent {
@@ -134,7 +202,10 @@ section {
   border-radius: 22px;
   background-color: $accent-color;
   padding: 8px 32px;
-  z-index: 1;
+
+  &:hover {
+    background-color: darken($accent-color, 20%);
+  }
 }
 
 .btn-main-outline {
@@ -146,9 +217,14 @@ section {
   border: 1px solid $main-color;
   background-color: $white;
   padding: 12px 32px;
+
+  &:hover {
+    color: $white;
+    background-color: lighten($main-color, 25%);
+  }
 }
 
-button.go-to-top {
+.back-to-top {
   font-family: $special-font;
   font-size: 1.125rem;
   color: $white;
@@ -156,8 +232,24 @@ button.go-to-top {
   border-radius: 50%;
   width: 71px;
   height: 71px;
-  position: absolute;
+  position: fixed;
   right: 3%;
+  bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+@media (max-width: 376px) {
+  .back-to-top {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    width: 50px;
+    height: 50px;
+    right: 5%;
+    z-index: 1;
+  }
 }
 
 .five-star {
@@ -176,6 +268,12 @@ button.go-to-top {
 
 .fa-equals {
   margin: 0 19px;
+}
+
+@media (max-width: 376px) {
+  .fa-equals {
+    margin: 0 6px;
+  }
 }
 
 .fa-plus,

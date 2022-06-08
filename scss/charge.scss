@@ -1,24 +1,67 @@
 @import "common";
 
+.bg-img {
+  background: url("../images/banner.svg") no-repeat right top;
+  width: 55rem;
+  height: 35rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-shape {
+  background-color: $main-light-color;
+  border-radius: 0px 0px 0px 300px;
+  width: 100%;
+  height: 64vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+}
+
 // --- header
 header {
-  background: $main-light-color;
-  background-size: 100%;
-  border-radius: 0px 0px 0px 300px;
   height: 64vh;
-
-  .bg-img {
-    width: 55rem;
-    height: 35rem;
-    background-image: url("../images/banner.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 
   h2 {
     margin: 92px 0 16px 0;
+  }
+}
+
+@media (max-width: 376px) {
+  .bg-img {
+    background: url("../images/banner_sm.svg") no-repeat right top;
+    width: 23.5rem;
+    height: 31rem;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: -1;
+  }
+
+  .bg-shape {
+    background-color: $main-light-color;
+    border-radius: 0px 0px 0px 150px;
+    width: 100%;
+    height: 88vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+
+  header {
+    height: 85vh;
+
+    h2 {
+      margin: 48px 0 16px 0;
+    }
+
+    nav + .container {
+      margin: 0 10px;
+    }
   }
 }
 
@@ -28,20 +71,54 @@ header {
   background: url("../images/ball03.svg") no-repeat -22% 72% / 22.5rem;
 }
 
+@media (max-width: 376px) {
+  .program {
+    background: url("../images/ball03.svg") no-repeat -65% 60% / 12.75rem;
+  }
+}
+
 .population {
   margin-bottom: 64px;
   display: flex;
   justify-content: center;
 
   .population-item {
-    padding: 0 8px;
+    text-align-last: left;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 376px) {
+  .program {
+    h3 {
+      margin-bottom: 24px;
+    }
+
+    .population {
+      margin-bottom: 32px;
+      // 原本的jcc在mobile會截到第一顆按鈕
+      justify-content: start;
+      // Horizontal Scrollable Menu
+      overflow-x: scroll;
+      white-space: nowrap;
+
+      .population-item {
+        margin: 0 3px;
+
+        button {
+          font-size: 1rem;
+          line-height: 1.5;
+          padding: 8px 16px;
+        }
+      }
+    }
   }
 }
 
 .plan {
   display: flex;
   justify-content: space-evenly;
-  
+
   .card {
     padding: 16px 32px;
 
@@ -51,6 +128,22 @@ header {
 
     .btn-main {
       margin-bottom: 8px;
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .plan {
+    flex-direction: column;
+    margin-bottom: -24px;
+
+    .card {
+      padding: 16px;
+      margin-bottom: 24px;
+
+      hr + p {
+        margin: 24px 0;
+      }
     }
   }
 }
@@ -83,9 +176,24 @@ header {
   }
 }
 
+@media (max-width: 376px) {
+  .conversion {
+    .subscriber {
+      span {
+        font-size: 1.75rem;
+        line-height: 32px;
+      }
+
+      sub {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
 .plan-items {
   margin: 32px 0;
-  text-align-last: left;
+  text-align: left;
 
   li {
     padding: 8px 0;
@@ -94,7 +202,6 @@ header {
 
 // --- FAQ
 .FAQ {
-  
   h3 {
     text-align: center;
   }
@@ -108,6 +215,7 @@ header {
       margin: 16px 0;
 
       .answer {
+        color: $note-color;
         margin-top: 24px;
         line-height: 32px;
       }
@@ -118,9 +226,16 @@ header {
         color: $main-color;
         font-weight: bold;
       }
+    }
+  }
+}
 
-      .answer {
-        color: $note-color;
+@media (max-width: 376px) {
+  .FAQ {
+    .QA {
+      li {
+        padding: 16px;
+        // margin: 16px 0;
       }
     }
   }

@@ -2,6 +2,58 @@
    v2.0 | 20110126
    License: none (public domain) */
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Sans+TC:wght@400;700&family=Wendy+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Sans+TC:wght@400;700&family=Wendy+One&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark,
+audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
 abbr, acronym, address, big, cite, code, del, dfn,
@@ -366,228 +418,4 @@ section {
   width: 16px;
   background-color: #ffd153;
 }
-
-.bg-img {
-  background: url("../images/banner.svg") no-repeat right top;
-  width: 55rem;
-  height: 35rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-}
-
-.bg-shape {
-  background-color: #f7f9fd;
-  border-radius: 0px 0px 0px 300px;
-  width: 100%;
-  height: 64vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -2;
-}
-
-header {
-  height: 64vh;
-}
-
-header h2 {
-  margin: 92px 0 16px 0;
-}
-
-@media (max-width: 376px) {
-  .bg-img {
-    background: url("../images/banner_sm.svg") no-repeat right top;
-    width: 23.5rem;
-    height: 31rem;
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    z-index: -1;
-  }
-  .bg-shape {
-    background-color: #f7f9fd;
-    border-radius: 0px 0px 0px 150px;
-    width: 100%;
-    height: 88vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -2;
-  }
-  header {
-    height: 85vh;
-  }
-  header h2 {
-    margin: 48px 0 16px 0;
-  }
-  header nav + .container {
-    margin: 0 10px;
-  }
-}
-
-.program {
-  text-align: center;
-  background: url("../images/ball03.svg") no-repeat -22% 72%/22.5rem;
-}
-
-@media (max-width: 376px) {
-  .program {
-    background: url("../images/ball03.svg") no-repeat -65% 60%/12.75rem;
-  }
-}
-
-.population {
-  margin-bottom: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.population .population-item {
-  text-align-last: left;
-  margin: 0 8px;
-}
-
-@media (max-width: 376px) {
-  .program h3 {
-    margin-bottom: 24px;
-  }
-  .program .population {
-    margin-bottom: 32px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    overflow-x: scroll;
-    white-space: nowrap;
-  }
-  .program .population .population-item {
-    margin: 0 3px;
-  }
-  .program .population .population-item button {
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 8px 16px;
-  }
-}
-
-.plan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.plan .card {
-  padding: 16px 32px;
-}
-
-.plan .card hr + p {
-  margin: 32px 0;
-}
-
-.plan .card .btn-main {
-  margin-bottom: 8px;
-}
-
-@media (max-width: 376px) {
-  .plan {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: -24px;
-  }
-  .plan .card {
-    padding: 16px;
-    margin-bottom: 24px;
-  }
-  .plan .card hr + p {
-    margin: 24px 0;
-  }
-}
-
-.conversion .subscriber span,
-.conversion .subscriber sub {
-  color: #56c4c5;
-}
-
-.conversion p {
-  font-size: 0.75rem;
-  line-height: 17px;
-  margin-bottom: 8px;
-}
-
-.conversion span {
-  font-family: "Comfortaa", sans-serif;
-  font-size: 2rem;
-  line-height: 35px;
-}
-
-.conversion sub {
-  font-size: 0.75rem;
-  font-weight: bold;
-  line-height: 17px;
-  margin-left: 8px;
-}
-
-@media (max-width: 376px) {
-  .conversion .subscriber span {
-    font-size: 1.75rem;
-    line-height: 32px;
-  }
-  .conversion .subscriber sub {
-    margin-left: 4px;
-  }
-}
-
-.plan-items {
-  margin: 32px 0;
-  text-align: left;
-}
-
-.plan-items li {
-  padding: 8px 0;
-}
-
-.FAQ h3 {
-  text-align: center;
-}
-
-.FAQ .QA li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  padding: 16px 32px;
-  margin: 16px 0;
-}
-
-.FAQ .QA li .answer {
-  color: #747474;
-  margin-top: 24px;
-  line-height: 32px;
-}
-
-.FAQ .QA .collapse-active .question {
-  color: #56c4c5;
-  font-weight: bold;
-}
-
-@media (max-width: 376px) {
-  .FAQ .QA li {
-    padding: 16px;
-  }
-}
-/*# sourceMappingURL=charge.css.map */
+/*# sourceMappingURL=style.css.map */
