@@ -1,5 +1,6 @@
 @import "reset";
 @import "variables";
+@import "mixin";
 
 // global style
 *,
@@ -52,10 +53,8 @@ h1 {
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 26px;
-}
 
-@media (max-width: 376px) {
-  h1 {
+  @include mobile {
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -65,10 +64,8 @@ h2 {
   font-size: 3rem;
   font-weight: bold;
   line-height: 70px;
-}
 
-@media (max-width: 376px) {
-  h2 {
+  @include mobile {
     font-size: 2rem;
     line-height: 46px;
   }
@@ -79,10 +76,8 @@ h3 {
   font-weight: bold;
   line-height: 46px;
   margin-bottom: 48px;
-}
 
-@media (max-width: 376px) {
-  h3 {
+  @include mobile {
     font-size: 1.75rem;
     line-height: 40px;
     margin-bottom: 32px;
@@ -107,10 +102,8 @@ h5 {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 16px;
-}
 
-@media (max-width: 376px) {
-  .container {
+  @include mobile {
     max-width: 355px;
     padding: 0 10px;
   }
@@ -119,20 +112,16 @@ h5 {
 nav {
   padding: 24px 0;
   margin-bottom: 30px;
-
-  a > img {
-    height: 40px;
-  }
-}
-
-@media (max-width: 376px) {
-  nav {
+  @include mobile {
     background-color: $white;
     padding: 16px 0;
     margin-bottom: 32px;
     border-bottom: 2px solid $sub-color;
+  }
 
-    a > img {
+  a > img {
+    height: 40px;
+    @include mobile {
       height: 24px;
     }
   }
@@ -141,11 +130,8 @@ nav {
 header,
 section {
   margin-bottom: 100px;
-}
 
-@media (max-width: 376px) {
-  header,
-  section {
+  @include mobile {
     margin-bottom: 60px;
   }
 }
@@ -166,10 +152,8 @@ section {
   padding: 24px 32px;
   border-radius: 12px;
   background-color: $note-light-color;
-}
 
-@media (max-width: 376px) {
-  .box {
+  @include mobile {
     padding: 16px 24px;
   }
 }
@@ -239,16 +223,13 @@ section {
   justify-content: center;
   align-items: center;
   z-index: 1;
-}
 
-@media (max-width: 376px) {
-  .back-to-top {
+  @include mobile {
     font-size: 0.875rem;
     line-height: 0.875rem;
     width: 50px;
     height: 50px;
     right: 5%;
-    z-index: 1;
   }
 }
 
@@ -268,10 +249,8 @@ section {
 
 .fa-equals {
   margin: 0 19px;
-}
 
-@media (max-width: 376px) {
-  .fa-equals {
+  @include mobile {
     margin: 0 6px;
   }
 }

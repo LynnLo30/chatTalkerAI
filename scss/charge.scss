@@ -30,9 +30,9 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .bg-img {
-    background: url("../images/banner_sm.svg") no-repeat right top;
+    background: url("../images/banner_sm.svg") no-repeat left top;
     width: 23.5rem;
     height: 31rem;
     position: absolute;
@@ -71,7 +71,7 @@ header {
   background: url("../images/ball03.svg") no-repeat -22% 72% / 22.5rem;
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .program {
     background: url("../images/ball03.svg") no-repeat -65% 60% / 12.75rem;
   }
@@ -88,7 +88,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .program {
     h3 {
       margin-bottom: 24px;
@@ -118,6 +118,7 @@ header {
 .plan {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 
   .card {
     padding: 16px 32px;
@@ -132,9 +133,8 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .plan {
-    flex-direction: column;
     margin-bottom: -24px;
 
     .card {
@@ -176,7 +176,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .conversion {
     .subscriber {
       span {
@@ -230,7 +230,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .FAQ {
     .QA {
       li {

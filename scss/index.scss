@@ -28,7 +28,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   header {
     background: url("../images/bg_home_sm.svg") no-repeat bottom 32px center / 90vw auto;
     height: 42rem;
@@ -95,7 +95,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .platform {
 
     .bg-ball {
@@ -179,7 +179,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .situation {
     .bg-ball {
       width: 5.5rem;
@@ -268,7 +268,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .feature {
     .container {
       flex-direction: column-reverse;
@@ -352,7 +352,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   .review {
     .bg-ball {
       top: 5%;
@@ -391,7 +391,7 @@ footer {
   }
 }
 
-@media (max-width: 376px) {
+@include mobile {
   footer {
     background: url("../images/footer_sm.svg") no-repeat 0% 0% / 100%;
 
